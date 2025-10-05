@@ -1,0 +1,26 @@
+{
+  "enabled": true,
+  "name": "Security Review & Documentation",
+  "description": "Automatically reviews changed files for security issues like exposed credentials, API keys, and sensitive data, while also generating comprehensive documentation for functions and classes",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "*.py",
+      "*.ipynb",
+      "*.js",
+      "*.ts",
+      "*.json",
+      "*.yaml",
+      "*.yml",
+      "*.md",
+      "*.env",
+      "*.config",
+      "ipynb"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Review the changed files for security vulnerabilities and documentation needs:\n\nSECURITY ANALYSIS:\n1. Scan for API keys, tokens, or credentials in source code\n2. Check for private keys or sensitive credentials  \n3. Look for encryption keys or certificates\n4. Identify authentication tokens or session IDs\n5. Flag passwords or secrets in configuration files\n6. Detect IP addresses containing sensitive data\n7. Find hardcoded internal URLs\n8. Spot database connection credentials\n\nFor each security issue found:\n- Highlight the specific security risk\n- Suggest a secure alternative approach  \n- Recommend security best practices\n\nDOCUMENTATION GENERATION:\n1. Extract function and class signatures\n2. Document parameters and return types\n3. Provide usage examples based on existing code\n4. Update the README.md with any new exports\n5. Ensure documentation follows project standards\n\nFocus on Python/Jupyter notebook files, configuration files, and any files that might contain sensitive information or need documentation updates."
+  }
+}

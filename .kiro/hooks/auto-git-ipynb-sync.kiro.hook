@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "name": "Auto Git Sync for Notebooks",
+  "description": "Automatically commits and pushes changes to the financial-advisor-multiagent repository whenever any .ipynb file is modified, ensuring the develop branch stays up to date",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "*.ipynb",
+      "**/*.ipynb"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A Jupyter notebook file has been modified. Please commit and push the changes to the git repository https://github.com/jayyanar/financial-advisor-multiagent.git on the develop branch. Make sure to add all .ipynb files, create a meaningful commit message describing the notebook changes, and push to the develop branch."
+  }
+}
