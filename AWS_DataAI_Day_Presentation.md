@@ -11,10 +11,8 @@
 - Seamless tool integration and context management
 - One prompt → Complete working solution
 
-### 3. **Journey Stage 1: Simple Strands Agent Creation**
-- **Demo**: "Create a basic financial advisor agent using Strands"
-- Show live code generation in seconds
-- Highlight best practices automatically included
+### 3. **Journey Stage 1: Simple Strands Agent Creation Manual**
+- **Demo**: "Create a basic working Strands Solution"
 
 ### 4. **Journey Stage 2: Multi-Agent Architecture Evolution**
 - **Demo**: "Convert this to a multi-agent system with specialist roles"
@@ -57,16 +55,39 @@
 
 ### **Stage 1: Foundation with MCP Server**
 ```
-💡 Idea → 🤖 Kiro MCP → 📝 Natural Language Prompt → ⚡ Working Code
+💡 Idea → 🤖 Kiro →  Add MCP → 📝 Natural Language Prompt → ⚡ Working Code
 ```
 
 **Key Message**: "I started with just an idea and a simple prompt to Kiro"
 
 ---
 
-### **Stage 2: Strands Agent Creation**
+### **Stage 2: Strands Agent Creation ipynb Notebook**
 ```
 🎯 Basic Prompt → 🔧 Strands Framework → 🤖 Financial Advisor Agent → ✅ Working Solution
+```
+
+Build a 4-step multi-agent Financial Advisor using Strands.
+
+Coordinator guides user through:
+1) Market Analysis → 2) Trading Strategies → 3) Execution Plan → 4) Risk Review.
+
+Each step uses a subagent:
+- data_analyst_agent: gathers news + SEC data for provided_ticker.
+- trading_analyst_agent: builds 5+ strategies based on risk & time horizon.
+- execution_analyst_agent: turns strategies into an execution plan.
+- risk_analyst_agent: reviews total risk & profile alignment.
+
+Show this intro:
+“Hello! I’ll guide you through financial analysis, strategy, execution, and risk. Say 'show me markdown' anytime. Ready to start?”
+
+Show this disclaimer (and append to every agent's output):
+“This is educational only, not financial advice. Past performance ≠ future results. Consult a qualified advisor.”
+
+Use shared state: provided_ticker, user_risk_attitude, user_investment_period, outputs from each step.
+
+Coordinator runs agents in order, passes state, summarizes outputs.
+
 ```
 
 **Demo Prompt**: *"Create a financial advisor agent using Strands that can analyze stocks"*
@@ -99,7 +120,7 @@
 🛠️ Basic Code → 🔒 Production Prompt → 🚀 Enterprise-Ready → ✨ Best Practices
 ```
 
-**Demo Prompt**: *"Make this production-ready with security, monitoring, and responsible AI practices"*
+**Demo Prompt**: *"Make this production-ready using Bedrock agentcore for the python financial_advisor.py  with security, monitoring, and responsible AI practices"*
 
 **Kiro's Additions**:
 - Input validation
