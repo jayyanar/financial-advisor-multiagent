@@ -1,0 +1,30 @@
+default_agent: financial_advisor_multiagent
+agents:
+  financial_advisor_multiagent:
+    name: financial_advisor_multiagent
+    entrypoint: financial_advisor_agentcore/__main__.py
+    platform: linux/arm64
+    container_runtime: none
+    aws:
+      execution_role: arn:aws:iam::098493093308:role/AmazonBedrockAgentCoreSDKRuntime-us-east-1-6ed1450d56
+      execution_role_auto_create: false
+      account: 098493093308
+      region: us-east-1
+      ecr_repository: 098493093308.dkr.ecr.us-east-1.amazonaws.com/bedrock-agentcore-financial_advisor_multiagent
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+    bedrock_agentcore:
+      agent_id: financial_advisor_multiagent-wERId2BiCo
+      agent_arn: arn:aws:bedrock-agentcore:us-east-1:098493093308:runtime/financial_advisor_multiagent-wERId2BiCo
+      agent_session_id: 894b63bf-f3b2-455f-853f-2c73e977b294
+    codebuild:
+      project_name: bedrock-agentcore-financial_advisor_multiagent-builder
+      execution_role: arn:aws:iam::098493093308:role/AmazonBedrockAgentCoreSDKCodeBuild-us-east-1-6ed1450d56
+      source_bucket: bedrock-agentcore-codebuild-sources-098493093308-us-east-1
+    authorizer_configuration: null
+    oauth_configuration: null

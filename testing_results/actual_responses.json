@@ -1,0 +1,78 @@
+{
+  "AAPL": {
+    "success": true,
+    "response": {
+      "result": "Thank you for providing the ticker symbol AAPL (Apple Inc.). To provide you with a comprehensive analysis, I'll need two more pieces of information:\n\n1. Your risk attitude (Conservative, Moderate, or Aggressive)\n2. Your investment time horizon (Short-term, Medium-term, or Long-term)\n\nOnce you provide these details, I can coordinate our specialist agents to develop tailored market intelligence, trading strategies, execution plans, and risk assessment for Apple stock.\n\n**Important:** This is for educational purposes only and does not constitute financial advice.\n",
+      "timestamp": "2025-10-06T18:30:29.488485+00:00",
+      "system": "financial-advisor-multiagent",
+      "metadata": {
+        "version": "1.0.0",
+        "agent_type": "financial_advisor",
+        "educational_disclaimer": true,
+        "response_format": "structured_analysis",
+        "capabilities": [
+          "market_intelligence",
+          "strategy_development",
+          "execution_planning",
+          "risk_assessment"
+        ],
+        "disclaimer": "Educational purposes only - not licensed financial advice",
+        "response_stats": {
+          "character_count": 567,
+          "processing_timestamp": "2025-10-06T18:30:29.488496+00:00"
+        }
+      }
+    },
+    "content_preview": "Thank you for providing the ticker symbol AAPL (Apple Inc.). To provide you with a comprehensive analysis, I'll need two more pieces of information:\n\n1. Your risk attitude (Conservative, Moderate, or Aggressive)\n2. Your investment time horizon (Short-term, Medium-term, or Long-term)\n\nOnce you provide these details, I can coordinate our specialist agents to develop tailored market intelligence, trading strategies, execution plans, and risk assessment for Apple stock.\n\n**Important:** This is for e"
+  },
+  "Analyze TSLA": {
+    "success": false,
+    "error": "HTTPConnectionPool(host='localhost', port=8080): Read timed out. (read timeout=10)"
+  },
+  "I want investment advice": {
+    "success": true,
+    "response": {
+      "error": "An unexpected error occurred processing your financial advisory request",
+      "error_type": "system_error",
+      "timestamp": "2025-10-06T18:30:40.221463+00:00",
+      "system": "financial-advisor-multiagent",
+      "metadata": {
+        "error_category": "system_error",
+        "error_class": "ValidationException",
+        "recoverable": false,
+        "suggestion": "Please try again later or contact support if the issue persists"
+      }
+    },
+    "content_preview": ""
+  },
+  "": {
+    "success": true,
+    "response": {
+      "error": "Invalid request format: Please provide a financial advisory request. Include ticker symbol, risk tolerance (Conservative/Moderate/Aggressive), and investment horizon (Short-term/Medium-term/Long-term) for best results. Example: 'Analyze AAPL stock for moderate risk investor with long-term horizon'",
+      "error_type": "validation_error",
+      "timestamp": "2025-10-06T18:30:40.223579+00:00",
+      "system": "financial-advisor-multiagent",
+      "metadata": {
+        "error_category": "payload_validation",
+        "recoverable": true,
+        "suggestion": "Please check your request format and try again"
+      }
+    },
+    "content_preview": ""
+  },
+  "   ": {
+    "success": true,
+    "response": {
+      "error": "Invalid request format: Please provide a non-empty financial advisory request. Include ticker symbol, risk tolerance, and investment horizon for best results.",
+      "error_type": "validation_error",
+      "timestamp": "2025-10-06T18:30:40.224758+00:00",
+      "system": "financial-advisor-multiagent",
+      "metadata": {
+        "error_category": "payload_validation",
+        "recoverable": true,
+        "suggestion": "Please check your request format and try again"
+      }
+    },
+    "content_preview": ""
+  }
+}

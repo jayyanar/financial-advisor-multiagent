@@ -1,0 +1,107 @@
+{
+  "timestamp": "2025-10-07T00:05:20.388414",
+  "test_categories": {
+    "simple_ticker_queries": {
+      "category": "simple_ticker_queries",
+      "total_tests": 2,
+      "passed_tests": 1,
+      "test_results": [
+        {
+          "query": "AAPL",
+          "description": "Single ticker symbol",
+          "response_received": true,
+          "response_time": 3.831145763397217,
+          "passed": true,
+          "analysis": {
+            "ticker_mentioned": true,
+            "asks_for_missing_parameters": true,
+            "has_educational_disclaimer": true,
+            "response_length": 695
+          }
+        },
+        {
+          "query": "Analyze TSLA",
+          "description": "Ticker with analyze verb",
+          "response_received": false,
+          "response_time": 0,
+          "passed": false,
+          "analysis": {}
+        }
+      ]
+    },
+    "complete_queries": {
+      "category": "complete_queries",
+      "total_tests": 1,
+      "passed_tests": 0,
+      "test_results": [
+        {
+          "query": "Conservative investor, long-term horizon, analyze AAPL",
+          "description": "Complete query with all parameters",
+          "response_received": false,
+          "response_time": 0,
+          "passed": false,
+          "analysis": {}
+        }
+      ]
+    },
+    "missing_parameter_queries": {
+      "category": "missing_parameter_queries",
+      "total_tests": 1,
+      "passed_tests": 0,
+      "test_results": [
+        {
+          "query": "I want investment advice",
+          "description": "Missing all parameters",
+          "response_received": true,
+          "response_time": 0.7223460674285889,
+          "passed": false,
+          "analysis": {
+            "requests_ticker": false,
+            "requests_risk": false,
+            "requests_horizon": false,
+            "provides_guidance": false,
+            "response_length": 71
+          }
+        }
+      ]
+    },
+    "edge_cases": {
+      "category": "edge_cases",
+      "total_tests": 2,
+      "passed_tests": 2,
+      "test_results": [
+        {
+          "query": "",
+          "description": "Empty query",
+          "response_received": true,
+          "response_time": 0.002022981643676758,
+          "passed": true,
+          "analysis": {
+            "has_error_response": true,
+            "appropriate_error_message": true,
+            "error_content": "invalid request format: please provide a financial advisory request. include ticker symbol, risk tol"
+          }
+        },
+        {
+          "query": "   ",
+          "description": "Whitespace-only query",
+          "response_received": true,
+          "response_time": 0.0011892318725585938,
+          "passed": true,
+          "analysis": {
+            "has_error_response": true,
+            "appropriate_error_message": true,
+            "error_content": "invalid request format: please provide a non-empty financial advisory request. include ticker symbol"
+          }
+        }
+      ]
+    }
+  },
+  "overall_stats": {
+    "total_tests": 6,
+    "passed_tests": 3,
+    "failed_tests": 3,
+    "success_rate": 50.0
+  },
+  "success": false
+}
