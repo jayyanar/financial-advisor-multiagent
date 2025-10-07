@@ -1,0 +1,122 @@
+{
+  "timestamp": "2025-10-07T07:03:04.861353",
+  "tests": {
+    "invalid_payload_formats": {
+      "passed": 5,
+      "failed": 0,
+      "details": [
+        {
+          "case": "Empty payload",
+          "passed": true,
+          "response": {
+            "error": "Invalid request format: Please provide a financial advisory request. Include ticker symbol, risk tolerance (Conservative/Moderate/Aggressive), and investment horizon (Short-term/Medium-term/Long-term) for best results. Example: 'Analyze AAPL stock for moderate risk investor with long-term horizon'",
+            "error_type": "validation_error",
+            "timestamp": "2025-10-07T01:33:04.908961+00:00",
+            "system": "financial-advisor-multiagent",
+            "metadata": {
+              "error_category": "payload_validation",
+              "recoverable": true,
+              "suggestion": "Please check your request format and try again"
+            }
+          }
+        },
+        {
+          "case": "Missing prompt field",
+          "passed": true,
+          "response": {
+            "error": "Invalid request format: Please provide a financial advisory request. Include ticker symbol, risk tolerance (Conservative/Moderate/Aggressive), and investment horizon (Short-term/Medium-term/Long-term) for best results. Example: 'Analyze AAPL stock for moderate risk investor with long-term horizon'",
+            "error_type": "validation_error",
+            "timestamp": "2025-10-07T01:33:04.939183+00:00",
+            "system": "financial-advisor-multiagent",
+            "metadata": {
+              "error_category": "payload_validation",
+              "recoverable": true,
+              "suggestion": "Please check your request format and try again"
+            }
+          }
+        },
+        {
+          "case": "Null prompt",
+          "passed": true,
+          "response": {
+            "error": "Invalid request format: Please provide a financial advisory request. Include ticker symbol, risk tolerance (Conservative/Moderate/Aggressive), and investment horizon (Short-term/Medium-term/Long-term) for best results. Example: 'Analyze AAPL stock for moderate risk investor with long-term horizon'",
+            "error_type": "validation_error",
+            "timestamp": "2025-10-07T01:33:04.941193+00:00",
+            "system": "financial-advisor-multiagent",
+            "metadata": {
+              "error_category": "payload_validation",
+              "recoverable": true,
+              "suggestion": "Please check your request format and try again"
+            }
+          }
+        },
+        {
+          "case": "Empty string prompt",
+          "passed": true,
+          "response": {
+            "error": "Invalid request format: Please provide a financial advisory request. Include ticker symbol, risk tolerance (Conservative/Moderate/Aggressive), and investment horizon (Short-term/Medium-term/Long-term) for best results. Example: 'Analyze AAPL stock for moderate risk investor with long-term horizon'",
+            "error_type": "validation_error",
+            "timestamp": "2025-10-07T01:33:04.942326+00:00",
+            "system": "financial-advisor-multiagent",
+            "metadata": {
+              "error_category": "payload_validation",
+              "recoverable": true,
+              "suggestion": "Please check your request format and try again"
+            }
+          }
+        },
+        {
+          "case": "Non-string prompt",
+          "passed": true,
+          "response": {
+            "error": "Invalid request format: The 'prompt' field must be a string containing your financial query",
+            "error_type": "validation_error",
+            "timestamp": "2025-10-07T01:33:04.944349+00:00",
+            "system": "financial-advisor-multiagent",
+            "metadata": {
+              "error_category": "payload_validation",
+              "recoverable": true,
+              "suggestion": "Please check your request format and try again"
+            }
+          }
+        }
+      ]
+    },
+    "malformed_requests": {
+      "passed": 1,
+      "failed": 0,
+      "details": []
+    },
+    "agent_error_scenarios": {
+      "passed": 2,
+      "failed": 0,
+      "details": []
+    },
+    "graceful_error_responses": {
+      "passed": 1,
+      "failed": 0,
+      "details": [
+        {
+          "structure_score": 5,
+          "response": {
+            "error": "Invalid request format: Please provide a financial advisory request. Include ticker symbol, risk tolerance (Conservative/Moderate/Aggressive), and investment horizon (Short-term/Medium-term/Long-term) for best results. Example: 'Analyze AAPL stock for moderate risk investor with long-term horizon'",
+            "error_type": "validation_error",
+            "timestamp": "2025-10-07T01:34:04.980198+00:00",
+            "system": "financial-advisor-multiagent",
+            "metadata": {
+              "error_category": "payload_validation",
+              "recoverable": true,
+              "suggestion": "Please check your request format and try again"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "summary": {
+    "total_passed": 9,
+    "total_failed": 0
+  },
+  "success": true,
+  "success_rate": 100.0
+}

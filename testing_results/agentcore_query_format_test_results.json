@@ -1,0 +1,318 @@
+{
+  "timestamp": "2025-10-07T00:01:36.849311",
+  "total_categories": 4,
+  "category_results": {
+    "simple_ticker_only": {
+      "category": "simple_ticker_only",
+      "total_queries": 2,
+      "successful_queries": 2,
+      "failed_queries": 0,
+      "query_results": [
+        {
+          "query": "AAPL",
+          "expected": {
+            "has_ticker": true,
+            "has_risk_tolerance": false,
+            "has_investment_horizon": false,
+            "expected_behavior": "should_request_missing_parameters",
+            "description": "Single ticker symbol only"
+          },
+          "response_received": true,
+          "response_time": 3.5188779830932617,
+          "parameter_analysis": {
+            "parameter_extraction_success": true,
+            "ticker_extraction": {
+              "expected": true,
+              "detected": true
+            },
+            "risk_tolerance_extraction": {
+              "expected": false,
+              "detected": true
+            },
+            "horizon_extraction": {
+              "expected": false,
+              "detected": true
+            },
+            "missing_parameter_handling": {
+              "appropriate": true,
+              "guidance_provided": true
+            },
+            "response_appropriateness": {
+              "matches_expectation": true,
+              "provides_guidance": false
+            }
+          },
+          "success": true
+        },
+        {
+          "query": "Analyze TSLA",
+          "expected": {
+            "has_ticker": true,
+            "has_risk_tolerance": false,
+            "has_investment_horizon": false,
+            "expected_behavior": "should_request_missing_parameters",
+            "description": "Simple ticker with analyze verb"
+          },
+          "response_received": true,
+          "response_time": 2.9699692726135254,
+          "parameter_analysis": {
+            "parameter_extraction_success": true,
+            "ticker_extraction": {
+              "expected": true,
+              "detected": true
+            },
+            "risk_tolerance_extraction": {
+              "expected": false,
+              "detected": true
+            },
+            "horizon_extraction": {
+              "expected": false,
+              "detected": true
+            },
+            "missing_parameter_handling": {
+              "appropriate": true,
+              "guidance_provided": true
+            },
+            "response_appropriateness": {
+              "matches_expectation": true,
+              "provides_guidance": false
+            }
+          },
+          "success": true
+        }
+      ]
+    },
+    "complete_queries": {
+      "category": "complete_queries",
+      "total_queries": 2,
+      "successful_queries": 0,
+      "failed_queries": 2,
+      "query_results": [
+        {
+          "query": "Analyze AAPL stock for a moderate risk investor with long-term investment horizon",
+          "expected": {
+            "has_ticker": true,
+            "has_risk_tolerance": true,
+            "has_investment_horizon": true,
+            "risk_level": "moderate",
+            "horizon": "long-term",
+            "expected_behavior": "should_provide_full_analysis",
+            "description": "Complete query with all parameters"
+          },
+          "response_received": false,
+          "response_time": 0,
+          "parameter_analysis": {},
+          "success": false
+        },
+        {
+          "query": "Conservative investor, long-term horizon, analyze TSLA",
+          "expected": {
+            "has_ticker": true,
+            "has_risk_tolerance": true,
+            "has_investment_horizon": true,
+            "risk_level": "conservative",
+            "horizon": "long-term",
+            "expected_behavior": "should_provide_full_analysis",
+            "description": "Parameters first, then ticker"
+          },
+          "response_received": true,
+          "response_time": 0.605522871017456,
+          "parameter_analysis": {
+            "parameter_extraction_success": false,
+            "ticker_extraction": {
+              "expected": true,
+              "detected": false
+            },
+            "risk_tolerance_extraction": {
+              "expected": true,
+              "detected": false
+            },
+            "horizon_extraction": {
+              "expected": true,
+              "detected": false
+            },
+            "missing_parameter_handling": {
+              "appropriate": true,
+              "guidance_provided": false
+            },
+            "response_appropriateness": {
+              "matches_expectation": true,
+              "provides_guidance": false
+            }
+          },
+          "success": false
+        }
+      ]
+    },
+    "missing_parameters": {
+      "category": "missing_parameters",
+      "total_queries": 2,
+      "successful_queries": 0,
+      "failed_queries": 2,
+      "query_results": [
+        {
+          "query": "Analyze AAPL for conservative investor",
+          "expected": {
+            "has_ticker": true,
+            "has_risk_tolerance": true,
+            "has_investment_horizon": false,
+            "risk_level": "conservative",
+            "missing_parameter": "investment_horizon",
+            "expected_behavior": "should_request_horizon",
+            "description": "Missing investment horizon"
+          },
+          "response_received": true,
+          "response_time": 0.6002261638641357,
+          "parameter_analysis": {
+            "parameter_extraction_success": false,
+            "ticker_extraction": {
+              "expected": true,
+              "detected": false
+            },
+            "risk_tolerance_extraction": {
+              "expected": true,
+              "detected": false
+            },
+            "horizon_extraction": {
+              "expected": false,
+              "detected": false
+            },
+            "missing_parameter_handling": {
+              "appropriate": false,
+              "guidance_provided": false
+            },
+            "response_appropriateness": {
+              "matches_expectation": false,
+              "provides_guidance": false
+            }
+          },
+          "success": false
+        },
+        {
+          "query": "I want investment advice",
+          "expected": {
+            "has_ticker": false,
+            "has_risk_tolerance": false,
+            "has_investment_horizon": false,
+            "missing_parameter": "all_parameters",
+            "expected_behavior": "should_request_all_parameters",
+            "description": "Missing all parameters"
+          },
+          "response_received": true,
+          "response_time": 0.5573060512542725,
+          "parameter_analysis": {
+            "parameter_extraction_success": false,
+            "ticker_extraction": {
+              "expected": false,
+              "detected": false
+            },
+            "risk_tolerance_extraction": {
+              "expected": false,
+              "detected": false
+            },
+            "horizon_extraction": {
+              "expected": false,
+              "detected": false
+            },
+            "missing_parameter_handling": {
+              "appropriate": false,
+              "guidance_provided": false
+            },
+            "response_appropriateness": {
+              "matches_expectation": false,
+              "provides_guidance": false
+            }
+          },
+          "success": false
+        }
+      ]
+    },
+    "edge_cases": {
+      "category": "edge_cases",
+      "total_queries": 2,
+      "successful_queries": 2,
+      "failed_queries": 0,
+      "query_results": [
+        {
+          "query": "",
+          "expected": {
+            "has_ticker": false,
+            "has_risk_tolerance": false,
+            "has_investment_horizon": false,
+            "expected_behavior": "should_handle_empty_query",
+            "description": "Empty query"
+          },
+          "response_received": true,
+          "response_time": 0.004438877105712891,
+          "parameter_analysis": {
+            "parameter_extraction_success": true,
+            "ticker_extraction": {
+              "expected": false,
+              "detected": false
+            },
+            "risk_tolerance_extraction": {
+              "expected": false,
+              "detected": true
+            },
+            "horizon_extraction": {
+              "expected": false,
+              "detected": true
+            },
+            "missing_parameter_handling": {
+              "appropriate": true,
+              "guidance_provided": true
+            },
+            "response_appropriateness": {
+              "matches_expectation": true,
+              "provides_guidance": false
+            }
+          },
+          "success": true
+        },
+        {
+          "query": "   ",
+          "expected": {
+            "has_ticker": false,
+            "has_risk_tolerance": false,
+            "has_investment_horizon": false,
+            "expected_behavior": "should_handle_whitespace_only",
+            "description": "Whitespace only query"
+          },
+          "response_received": true,
+          "response_time": 0.003098011016845703,
+          "parameter_analysis": {
+            "parameter_extraction_success": true,
+            "ticker_extraction": {
+              "expected": false,
+              "detected": false
+            },
+            "risk_tolerance_extraction": {
+              "expected": false,
+              "detected": true
+            },
+            "horizon_extraction": {
+              "expected": false,
+              "detected": true
+            },
+            "missing_parameter_handling": {
+              "appropriate": true,
+              "guidance_provided": true
+            },
+            "response_appropriateness": {
+              "matches_expectation": true,
+              "provides_guidance": false
+            }
+          },
+          "success": true
+        }
+      ]
+    }
+  },
+  "overall_stats": {
+    "total_queries": 8,
+    "successful_queries": 4,
+    "failed_queries": 4,
+    "success_rate": 50.0
+  },
+  "success": false
+}
