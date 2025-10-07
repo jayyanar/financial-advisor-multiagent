@@ -560,6 +560,19 @@ Our development flow includes automated security validation:
 - 🔄 **Git Auto-sync**: Whenever .ipynb files are updated
 - 📊 **Continuous Validation**: Automated testing on code changes
 
+### 🔄 Testing AgentCore
+
+<img width="1470" height="220" alt="image" src="https://github.com/user-attachments/assets/4a0fdb8c-9e1d-43a8-b906-6296ae4a5c65" />
+
+
+<img width="1459" height="610" alt="image" src="https://github.com/user-attachments/assets/5b1f0065-030b-4cc1-b574-9cc861df0dea" />
+
+
+<img width="1466" height="756" alt="image" src="https://github.com/user-attachments/assets/76d0c71f-a3ba-461d-b4a9-46299f96374c" />
+
+
+
+
 ## Contributing
 
 1. Fork the repository
