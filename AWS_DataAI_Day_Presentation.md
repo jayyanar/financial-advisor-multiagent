@@ -1,4 +1,5 @@
 # From Idea to Production: Building Multi-Agent Financial Advisors with Kiro & Strands
+https://pages.awscloud.com/data-ai-day-bengaluru-reg#agenda
 
 ## 🎯 **Top 10 Story Points for 15-Minute Demo**
 
