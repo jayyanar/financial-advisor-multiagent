@@ -17,7 +17,8 @@ The next step was building a working multi-agent prototype manually in Strands �
 
 #### 3️⃣ Kiro Spec Creation (Requirement → Design → Tasks)
 
-- **Prompt Used**: *"Build a 4-step multi-agent Financial Advisor using Strands.
+
+- **Prompt Used**: Build a 4-step multi-agent Financial Advisor using Strands.
 
 Coordinator guides user through:
 1) Market Analysis → 2) Trading Strategies → 3) Execution Plan → 4) Risk Review.
@@ -36,7 +37,7 @@ Show this disclaimer (and append to every agent's output):
 
 Use shared state: provided_ticker, user_risk_attitude, user_investment_period, outputs from each step.
 
-Coordinator runs agents in order, passes state, summarizes outputs.*"
+Coordinator runs agents in order, passes state, summarizes outputs.
 
   
 Using a single prompt, Kiro generated a complete specification — including:
