@@ -16,6 +16,29 @@ We started by configuring the Model Context Protocol (MCP) for both Strands (for
 The next step was building a working multi-agent prototype manually in Strands — defining agents, prompts, and tool calls to validate the orchestration pattern. This served as a proof of concept (POC) demonstrating that the flow works technically and logically.
 
 #### 3️⃣ Kiro Spec Creation (Requirement → Design → Tasks)
+
+- **Prompt Used**: *"Build a 4-step multi-agent Financial Advisor using Strands.
+
+Coordinator guides user through:
+1) Market Analysis → 2) Trading Strategies → 3) Execution Plan → 4) Risk Review.
+
+Each step uses a subagent:
+- data_analyst_agent: gathers news + SEC data for provided_ticker.
+- trading_analyst_agent: builds 5+ strategies based on risk & time horizon.
+- execution_analyst_agent: turns strategies into an execution plan.
+- risk_analyst_agent: reviews total risk & profile alignment.
+
+Show this intro:
+“Hello! I’ll guide you through financial analysis, strategy, execution, and risk. Say 'show me markdown' anytime. Ready to start?”
+
+Show this disclaimer (and append to every agent's output):
+“This is educational only, not financial advice. Past performance ≠ future results. Consult a qualified advisor.”
+
+Use shared state: provided_ticker, user_risk_attitude, user_investment_period, outputs from each step.
+
+Coordinator runs agents in order, passes state, summarizes outputs.*"
+
+  
 Using a single prompt, Kiro generated a complete specification — including:
 - **Requirements**: User stories and acceptance criteria
 - **System Design**: Architecture and component design  
